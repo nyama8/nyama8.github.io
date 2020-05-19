@@ -18,6 +18,7 @@ body {
   color: black;
   padding: 16px;
   text-decoration: none;
+
 }
 
 .sidebar a.active {
@@ -28,6 +29,7 @@ body {
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
+  transition: 0.5s;
 }
 
 div.bottom {
