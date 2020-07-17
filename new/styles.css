@@ -220,7 +220,7 @@ html, body {
   .sidebar {
     width: 100%;
     height: auto;
-    position: fixed;
+    position: relative;
   }
 
   .corner h1, p {
@@ -267,7 +267,6 @@ html, body {
     width: 100%;
     position: relative;
     overflow-y: hidden;
-    margin-top: 300px;
     margin-left: 0;
   }
 
