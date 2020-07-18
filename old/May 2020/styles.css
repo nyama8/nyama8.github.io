@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 16px;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+
+}
+
+.sidebar a.active {
+  background-color: #00a3cc;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  transition: 0.5s;
+}
+
+div.bottom {
+  position: inherit;
+  bottom: 10px;
+  font-size: 10pt;
+}
+
+div.content {
+  color: #333333;
+  margin-left: 282px;
+  padding: 5%;
+  padding-right: 10%;
+  min-height: 500px;
+}
+
+.content p {
+  font-weight: lighter;
+}
+
+img.imgContainer{
+    float:right;
+    width: 50%;
+    max-width:250px;
+    margin:10px;
+}
+
+.content a:link {
+  text-decoration: none;
+  color: #808080;
+}
+
+.content a:visited {
+  text-decoration: none;
+  color: #808080;
+}
+
+.content a:hover {
+  text-decoration: underline;
+  color: #808080;
+}
+
+li {
+  margin:10px 0;
+}
+
+.imgHeader {
+  background-image: url("Koolina.jpg");
+  min-height: 200px;
+
+  background-attachment: fixed;
+  background-position: 200px 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .bottom {
+    display: none;
+  }
+  .imgHeader {
+    display: none;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
