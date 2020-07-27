@@ -71,7 +71,7 @@ html, body {
   display: table;
 
   padding-left: 32px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .info {
@@ -459,7 +459,7 @@ tr.section-end  td{
     min-height: 200px;
 
     position: relative;
-    background-image: url("images/fujisan.png");
+    background-image: url("images/Koolina.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
   }
