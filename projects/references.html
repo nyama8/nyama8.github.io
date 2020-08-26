@@ -35,7 +35,7 @@
     </div>
 
     <div class="copyrights">
-      <p>Updated: July 2020, all rights reserved.</p>
+      <p>August 2020, all rights reserved.</p>
     </div>
 
   </div>
@@ -53,15 +53,129 @@
 
     <div class="info">
 
-      <h1>Project</h1>
-      <p>Page under construction.</p>
+      <h1>reference-manager</h1>
+      <p>This is a simple set of Python classes and methods for scraping article
+        metadata for journals and conference proceedings. The resulting classes
+        enable the creation of citations.</p>
 
+      <p>The scraper looks for article metadata by searching the HTML meta tags that
+        Google Scholar uses for indexing. Some websites do not use particular set of
+        meta tags (Highwire Press), which requires further work. Additionally,
+        some websites block parsing by scripts, in which case the HTML sources can
+        be downloaded and passed directly.</p>
+
+
+      <p>The following is a link to the project's
+        <a target="_blank" href="https://github.com/nyama8/reference-manager">Github repo</a>.</p>
+
+      <h2>Example</h2>
+      <p>The following is a portion of a <a target="_blank" href="https://github.com/nyama8/reference-manager/blob/master/examples/example.ipynb">
+        jupyter notebook</a> demonstrating basic usage:</p>
+
+      <div class="code-example">
+        <div class="code-box">
+          <code>
+            <b>import</b> reference <b>as</b> rf</br>
+            url = 'https://www.nature.com/articles/nphoton.2014.304'</br>
+            </br>
+            <i># The ref_name should be match to the object instance name</i></br>
+            ref_name = 'LiuX2015'</br>
+            LiuX2015 = rf.reference_from_url(ref_name, url)
+          </code>
+        </div>
+        <div class="code-output">
+          Accessing URL...</br>
+          Page accessed.</br>
+          </br>
+          Journal reference found.
+        </div>
+
+        <div class="code-box">
+          <code>
+            LiuX2015.name
+          </code>
+        </div>
+        <div class="code-output">
+          'LiuX2015'
+        </div>
+
+        <div class="code-box">
+          <code>
+            LiuX2015.title
+          </code>
+        </div>
+        <div class="code-output">
+          'Strong light–matter coupling in two-dimensional atomic crystals'
+        </div>
+
+
+        <div class="code-box">
+          <code>
+            LiuX2015.authors
+          </code>
+        </div>
+        <div class="code-output">
+          [('Xiaoze', '', 'Liu'),
+           ('Tal', '', 'Galfsky'),
+           ('Zheng', '', 'Sun'),
+           ('Fengnian', '', 'Xia'),
+           ('Erh-chen', '', 'Lin'),
+           ('Yi-Hsien', '', 'Lee'),
+           ('Stéphane', '', 'Kéna-Cohen'),
+           ('Vinod', 'M.', 'Menon')]
+        </div>
+
+        <div class="code-box">
+          <code>
+            <b>print</b>(LiuX2015.generate_bibtex())
+          </code>
+        </div>
+        <div class="code-output">
+          @article{LiuX2015, </br>
+          	author  = "Xiaoze Liu and Tal Galfsky and Zheng Sun and Fengnian Xia
+            and Erh-chen Lin and Yi-Hsien Lee and Stéphane Kéna-Cohen
+            and Vinod M. Menon",</br>
+          	title   = "Strong light–matter coupling in two-dimensional atomic crystals",</br>
+          	year    = "2015",</br>
+          	month   = "Jan.",</br>
+          	jounral = "Nature Photonics",</br>
+          	volume  = "9",</br>
+          	number  = "1",</br>
+          	pages   = "30--34"</br>
+          }
+        </div>
+
+
+      </div>
+
+
+      <h2>Module descriptions</h2>
+      <ul>
+        <li> <code>reference.py</code>: A module containing the <code>Reference</code> class
+          and several methods for creating creating <code>Reference</code> classes.
+          The following are examples of included objects:
+          <ul class="module-list">
+            <li> <code>Reference</code> (class): A class that reprsents a single scientific work
+            <li> <code>reference_from_url()</code> (function): A method that gets the reference
+              metadata from a url
+            <li> <code>reference_from_src()</code> (function): A method that gets the reference
+              metadata from a website's html source file (necessary when websites block access
+              via scripts).
+          </ul>
+        <li> <code>scraper.py</code>: A module containing methods for scraping metadata
+          from journal and conference publication websites. Primarily used as a helper
+          module to the <code>reference.py</code> module, but can be used for other
+          applications without the <code>Reference</code> class.
+
+      </ul>
 
 
 
     </div>
 
+
   </div>
 
 
 </body>
+</html>
