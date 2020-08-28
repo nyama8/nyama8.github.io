@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Nick Yama</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="projects/project_styles.css">
+</head>
+<body>
+
+  <div class="sidebar">
+
+    <div class="corner">
+      <h1>Nicholas S. Yama</h1>
+      <p>nsyama@uw.edu</p>
+      <p style="margin-top:1em;">PhD student @ the University of Washington</p>
+
+      <div class="iconbar">
+        <a target="_blank" href="files/yama_CV.pdf" style="background-image: url(icons/cvicon.png);"></a>
+        <a target="_blank" href="https://github.com/nyama8" style="background-image: url(icons/githubicon.png);"></a>
+        <a target="_blank" href="https://www.researchgate.net/profile/Nicholas_Yama" style="background-image: url(icons/researchgateicon.png);"></a>
+      </div>
+
+
+    </div>
+
+
+    <div class="nav">
+      <a href="index.html" class="button"><span>Home</span></a>
+      <a href="research.html" class="button"><span>Research</span></a>
+      <a href="projects.html" class="button"><span>Projects</span></a>
+      <a href="resume.html" class="button"><span>CV/Resume</span></a>
+    </div>
+
+    <div class="copyrights">
+      <p>August 2020, all rights reserved.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="content">
+
+    <div class="header">
+      <div class="header-image"></div>
+      <div class="header-title">
+        <h1>Projects</h1>
+      </div>
+    </div>
+
+    <div class="info">
+
+      <h1>Programming</h1>
+      <div class="project-card">
+        <a href="projects/sounds.html" class="card-title">
+          <div class="proj-name">sound-engine</div>
+          <div class="proj-icon"> read more &#8250; </div>
+        </a>
+
+
+        <div class="card-summary">
+          <p>A simple set of Python modules that are capable of representing and
+            playing music. The following cover was created using this code.</p>
+
+            <div class="music-box">
+              <div class="thumbnail"><img src="images/rainbows.png"></div>
+              <div class="player">
+                <h4>Weird Fishes/Arpeggi, Radiohead</h4>
+                <p>A cover of Weird Fishes/Arpeggi by Radiohead from <i>In Rainbows</i>.</p>
+                <audio controls>
+                  <source src="files/weird_fishes.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <a href="projects/references.html" class="card-title">
+          <div class="proj-name">reference-manager</div>
+          <div class="proj-icon"> read more &#8250; </div>
+        </a>
+
+
+        <div class="card-summary">
+          <p>A set of Python modules for scraping journal webstites for article
+            metadata and creating citations.</p>
+
+            <div class="music-box" style="height:auto">
+              <div class="code-box" style='float: left; width:100%; box-sizing:border-box;'>
+                <code>
+                  <b>import</b> reference <b>as</b> rf</br>
+                  refObj = rf.reference_from_url(ref_name, url)
+                </code>
+              </div>
+              <div class="code-output", style='float: left; width:100%; box-sizing:border-box;'>
+                Journal reference found.
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- The following javascript is from https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+</body>
+</html>
