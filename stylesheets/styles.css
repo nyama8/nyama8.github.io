@@ -1,16 +1,16 @@
 @font-face {
   font-family: notoSans_light;
-  src: url(fonts/Noto_Sans_JP/NotoSansJP-Light.otf);
+  src: url(/fonts/Noto_Sans_JP/NotoSansJP-Light.otf);
 }
 
 @font-face {
   font-family: notoSans_regular;
-  src: url(fonts/Noto_Sans_JP/NotoSansJP-Regular.otf);
+  src: url(/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf);
 }
 
 @font-face {
   font-family: notoSans_bold;
-  src: url(fonts/Noto_Sans_JP/NotoSansJP-Bold.otf);
+  src: url(/fonts/Noto_Sans_JP/NotoSansJP-Bold.otf);
 }
 
 html, body {
@@ -52,7 +52,7 @@ html, body {
 .header-image {
   height: 120%;
   width: 100%;
-  background-image: url("images/Koolina.jpeg");
+  background-image: url("/images/Koolina.jpeg");
   background-size: cover;
 
   position: absolute;
@@ -199,7 +199,7 @@ html, body {
   text-align: center;
   padding-top: 10px;
 
-  background-image: url("images/kiyomizudera1_banner.png");
+  background-image: url("/images/kiyomizudera1_banner.png");
   background-size: cover;
 }
 
@@ -459,7 +459,7 @@ tr.section-end  td{
     min-height: 200px;
 
     position: relative;
-    background-image: url("images/Koolina.jpeg");
+    background-image: url("/images/Koolina.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
   }
