@@ -6,7 +6,6 @@
   <title>Nick Yama</title>
 
   <link rel="stylesheet" href="/stylesheets/styles.css">
-  <link rel="stylesheet" href="/stylesheets/project_styles.css">
 </head>
 <body>
 
@@ -47,68 +46,93 @@
     <div class="header">
       <div class="header-image"></div>
       <div class="header-title">
-        <h1>Projects</h1>
+        <h1>Research</h1>
       </div>
     </div>
 
     <div class="info">
 
-      <h1>Programming</h1>
-      <div class="project-card">
-        <a href="/projects/sounds" class="card-title">
-          <div class="proj-name">sound-engine</div>
-          <div class="proj-icon"> read more &#8250; </div>
-        </a>
+      <h1>Research interests</h1>
+      <p>My research interests are primarily in the intersection of physics and engineering focusing on the development and implementation
+        of technologies for quantum information processing.
+      </p>
+
+      <h1>Current and past projects</h1>
+      <h2>Liquid-Metal (LM) reconfigurable electronics</h2>
+      <h3>PI: Aaron Ohta and Wayne Shiroma, Milimeter wave electronics lab, 2018-2020</h3>
+      <p>Room-temperature liquid metals (LM) can be used to enable reconfigurability in radio-frequency
+        (RF) electronics. The devices can be reconfigured using voltage signals by means of continuous electrowetting, which requires an
+        immersing electrolyte solution. My work on this project was primarily concerned with characterizing the effect of the electrolyte
+        <a href="#J1">[J.1]</a> and modeling their effect in these devices <a href="#C4">[C.4]</a>.
+      </p>
+
+      <h2>Valley physics in 2D materials coupled to photonic structures</h2>
+      <h3>PI: Vinod Menon, Laboratory for Nano and Micro Photonics, 2018-2020</h3>
+      <p>Transition metal dichalcogenides (TMDCs) are a class of layered Van er Waals materials that
+        can be reduced to layers only a few atoms thick. In this limit, TMDCs exhibit a variety of unique optical and electronic properties
+        including the valley degree-of-freedom, which could potentialy serve as qubit. My work on this project was primarily focused on
+        characterizing the valley properties when coupled to photonic structures <a href="#C3">[C.1-3]</a>.
+      </p>
+
+      <h1>Publications</h1>
+      <!-- Append new entries to the end, displayed in reverse -->
+      <h2>Journal papers</h2>
+      <ol class="journal-list">
+        <li id="J1">K. Elassy, M Rahman, <b>N. S. Yama</b>, W. A. Shiroma, and A. T. Ohta,
+          "Complex permittivity of NaOH solutions used in liquid-metal circuits,"
+          <i>IEEE Access</i>, vol. 7, no. 1, pp. 150150-150156, October 2019.
+          DOI: <a target="_blank" href="https://ieeexplore.ieee.org/document/8861070">10.1109/ACCESS.2019.2945773</a>
+        </li>
+
+        <li id="J2"> S. Guddala, M. Khatoniar, <b>N. S. Yama</b>, G. S. Agarwal, and V. M. Menon,
+          "Optical valley-Hall effect of 2D excitons in hyperbolic metamaterial."<br />
+          <i>In preparation</i>
+        </li>
+
+        <li id="J3"> M. Khatoniar, <b>N. S. Yama</b>, A. Ghazaryan, S. Guddala, P. Ghaemi, and V. M. Menon,
+          "Microcavity circular-birefringence-assisted control of valley coherence in bilayer WS2 polaritons."<br />
+          <i>In preparation</i>
+        </li>
 
 
-        <div class="card-summary">
-          <p>A simple set of Python modules that are capable of representing and
-            playing music. The following cover was created using this code.</p>
+      </ol>
 
-            <div class="music-box">
-              <div class="thumbnail"><img src="/images/rainbows.png"></div>
-              <div class="player">
-                <h4>Weird Fishes/Arpeggi, Radiohead</h4>
-                <p>A cover of Weird Fishes/Arpeggi by Radiohead from <i>In Rainbows</i>.</p>
-                <audio controls>
-                  <source src="/files/weird_fishes.wav" type="audio/wav">
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            </div>
-        </div>
-      </div>
+      <h2>Refereed conference proceedings</h2>
+      <!-- Append new entries to the end, displayed in reverse -->
+      <ol class="conference-list">
+        <li id="C1">M. Khatoniar, <b>N. Yama</b>, A. Ghazaryan, S. Guddala, P. Ghaemi, and V. Menon,
+           "Room Temperature Control of Valley Coherence in Bilayer WS2 Exciton Polaritons,"
+           in <i>Conference on Lasers and Electro-Optics</i>, OSA Technical Digest (Optical Society of America, 2019),
+           paper JTu2A.52. DOI: <a target="_blank" href="https://doi.org/10.1364/CLEO_AT.2019.JTu2A.52">10.1364/CLEO_AT.2019.JTu2A.52</a>
+         </li>
+
+        <li id="C2">S. Guddala, M. Khatoniar, <b>N. Yama</b>, and V. M. Menon,
+          "Optical valley-Hall effect of 2D excitons,"
+          in <i>Conference on Lasers and Electro-Optics</i>, OSA Technical Digest (Optical Society of America, 2019),
+          paper FM4D.2. DOI: <a target="_blank" href="https://doi.org/10.1364/CLEO_QELS.2019.FM4D.2">10.1364/CLEO_QELS.2019.FM4D.2</a>
+        </li>
+
+        <li id="C3">M. Khatoniar, B. Chakraborty, <b>N. Yama</b>, and V. Menon,
+          "Long Range Valley Hall Effect in WS2 Bloch Surface Wave Exciton Polaritons,"
+          in <i>Conference on Lasers and Electro-Optics</i>, OSA Technical Digest (Optical Society of America, 2020),
+          paper SW3G.3. Link: <a target="_blank" href="https://www.osapublishing.org/abstract.cfm?uri=CLEO_SI-2020-SW3G.3"><i>OSA Publishing</i></a>
+        </li>
+
+        <li id="C4"><b>N. S. Yama</b>, K. Elassy, W. A. Shiroma, and A. T. Ohta,
+          "Predictive design of a liquid-metal switch actuated by continuous electrowetting,"
+           <i>IEEE Texas Symposium on Wireless & Microwave Circuits and Systems</i>,
+           Presented on May 27, 2020.
+           DOI: <a target="_blank" href="https://doi.org/10.1109/WMCS49442.2020.9172401">10.1109/WMCS49442.2020.9172401</a>
+         </li>
+      </ol>
 
 
-      <div class="project-card">
-        <a href="projects/references" class="card-title">
-          <div class="proj-name">reference-manager</div>
-          <div class="proj-icon"> read more &#8250; </div>
-        </a>
-
-
-        <div class="card-summary">
-          <p>A set of Python modules for scraping journal webstites for article
-            metadata and creating citations.</p>
-
-            <div class="music-box" style="height:auto">
-              <div class="code-box" style='float: left; width:100%; box-sizing:border-box;'>
-                <code>
-                  <b>import</b> reference <b>as</b> rf</br>
-                  refObj = rf.reference_from_url(ref_name, url)
-                </code>
-              </div>
-              <div class="code-output", style='float: left; width:100%; box-sizing:border-box;'>
-                Journal reference found.
-              </div>
-            </div>
-        </div>
-      </div>
 
 
     </div>
 
   </div>
+
 
 </body>
 </html>
