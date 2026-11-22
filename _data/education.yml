@@ -1,0 +1,13 @@
+# Education, shown in the side card on the About page, NEWEST FIRST.
+# Fields: degree, school, detail (optional extra line), years.
+# Source: the old CV page (updated March 2024).
+
+- degree: PhD candidate, Electrical and Computer Engineering
+  school: University of Washington, Seattle
+  detail: "Advisor: Prof. Kai-Mei Fu"
+  years: 2020 – present
+
+- degree: BS, Electrical Engineering
+  school: University of Hawaiʻi at Mānoa
+  detail: Minor in Physics
+  years: 2016 – 2020

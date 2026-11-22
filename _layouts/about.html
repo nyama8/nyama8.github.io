@@ -11,12 +11,38 @@ layout: default
       <li><a href="mailto:{{ site.author.email }}">{% include icon.html name="email" %}<span>Email</span></a></li>
       <li><a href="{{ site.author.scholar }}">{% include icon.html name="scholar" %}<span>Google Scholar</span></a></li>
       <li><a href="{{ site.author.github }}">{% include icon.html name="github" %}<span>GitHub</span></a></li>
+      <li><a href="{{ site.author.linkedin }}">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
       <li><a href="{{ site.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="cv" %}<span>CV (PDF)</span></a></li>
     </ul>
   </div>
 </section>
 
-<section class="card prose">
-  <h2>About</h2>
-  {{ content }}
-</section>
+{%- comment -%}
+  Two columns on wide screens: About text on the left, side cards on the right.
+  On phones the side cards come first (above the About text).
+  Education entries are edited in _data/education.yml.
+{%- endcomment %}
+<div class="about-grid">
+  <aside class="about-side">
+    <section class="card side-card">
+      <h2>Education</h2>
+      <ul class="edu">
+        {%- for e in site.data.education %}
+        <li>
+          <p class="edu-degree">{{ e.degree }}</p>
+          <p class="edu-school">{{ e.school }}</p>
+          {%- if e.detail %}
+          <p class="edu-detail">{{ e.detail }}</p>
+          {%- endif %}
+          <p class="edu-years">{{ e.years }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </aside>
+
+  <section class="card prose about-main">
+    <h2>About</h2>
+    {{ content }}
+  </section>
+</div>
