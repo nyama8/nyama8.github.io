@@ -6,17 +6,13 @@ layout: default
 
 {%- comment -%}
   Pages with "subtopics:" (e.g. Prior topics): the page title on top, then one card per
-  subtopic, each laid out like a topic page (title, optional place/years line, text,
-  Related papers).
+  subtopic, each laid out like a topic page (title, text, Related papers).
 {%- endcomment %}
 {%- if page.subtopics %}
 <h1 class="page-title">{{ page.title }}</h1>
 {%- for s in page.subtopics %}
 <article class="card prose topic-page">
   <h2 class="topic-page-title">{{ s.title }}</h2>
-  {%- if s.where %}
-  <p class="subtopic-where">{{ s.where }}</p>
-  {%- endif %}
   {%- if s.text %}
   <p>{{ s.text }}</p>
   {%- endif %}

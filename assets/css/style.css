@@ -345,9 +345,6 @@ img { max-width: 100%; height: auto; }
 }
 .highlight .highlight-text { margin: 0; }   /* ".highlight" makes this win over the general paragraph spacing */
 
-/* Place/years line under a subtopic title on the Prior topics page. */
-.topic-page .subtopic-where { color: var(--muted); font-size: 0.9rem; margin: -0.6rem 0 1rem; }
-
 .related-heading {
   font-size: 0.8rem;
   text-transform: uppercase;
