@@ -1,0 +1,290 @@
+# Publications: one entry per paper, NEWEST FIRST.
+# Used by the Publications page and by the "Related papers" lists on the Research page.
+#
+# Fields (leave out any you don't have; link buttons only appear for fields that are filled in):
+#   id:       short unique name, used to refer to the paper from research.md
+#   type:     journal  or  preprint
+#   title, year
+#   authors:  list of names as printed in the paper. Add * after a name for equal contribution.
+#             Your name is shown in bold automatically (see author_names in _config.yml).
+#   journal, volume, issue, pages   (journal articles)
+#   doi:      e.g. 10.1021/acs.nanolett.2c04890  -> "Paper" button
+#   arxiv:    e.g. 2212.04670                    -> "arXiv" button
+#   arxiv_category: e.g. quant-ph (only used in the BibTeX of preprints)
+#   pdf, code, data: full links                  -> "PDF", "Code", "Data" buttons
+#   abstract: text shown under an "Abstract" toggle (use  abstract: >-  then indented lines)
+#
+# The BibTeX shown on the page is generated from these fields.
+#
+# Sources used to fill this in (Nov 2026): the old CV page, Google Scholar, Crossref and arXiv.
+
+# ---------------------------------------------------------------- preprints
+
+- id: yama2026transduction
+  type: preprint
+  title: Microwave-optical quantum transduction with quantum-well exciton polaritons
+  year: 2026
+  authors:
+    - Nicholas S. Yama
+    - Mohammad Khalifa
+    - Yuxuan Wei
+    - Adbhut Gupta
+    - Loren N. Pfeiffer
+    - Feng Wang
+    - Alp Sipahigil
+  arxiv: "2611.21785"
+  arxiv_category: quant-ph
+
+# ---------------------------------------------------------------- journal articles
+
+- id: yama2026opticaq
+  type: journal
+  title: Efficient spin-photon interactions in a scalable nanophotonic platform
+  year: 2026
+  authors:
+    - Nicholas S. Yama
+    - Chun-Chi Wu
+    - Fariba Hatami
+    - Kai-Mei C. Fu
+  journal: Optica Quantum
+  volume: 4
+  issue: 5
+  pages: 511-517
+  doi: 10.1364/OPTICAQ.607235
+  # CHECK: assumed to be the published version of arXiv:2601.04733
+  # ("A scalable gallium-phosphide-on-diamond spin-photon interface"). Same authors and topic,
+  # but the title differs. If they are different works, remove this line and add the preprint
+  # as its own entry above.
+  arxiv: "2601.04733"
+
+- id: chen2025sciadv
+  type: journal
+  title: Intermodal microwave-to-optical transduction using silicon-on-sapphire optomechanical ring resonator
+  year: 2025
+  authors:
+    - I-Tung Chen
+    - Nicholas S. Yama
+    - Haoqin Deng
+    - Qixuan Lin
+    - Yue Yu
+    - Abhi Saxena
+    - Arka Majumdar
+    - Kai-Mei C. Fu
+    - Mo Li
+  journal: Science Advances
+  volume: 11
+  issue: 37
+  pages: eadx6485
+  doi: 10.1126/sciadv.adx6485
+
+- id: li2025acsnano
+  type: journal
+  title: Room-temperature picosecond single-photon emission from a silicon vacancy center in diamond
+  year: 2025
+  authors:
+    - Hengming Li
+    - Deniz Acil
+    - Andrew M. Boyce
+    - Nicholas S. Yama
+    - Christian Pederson
+    - Srivatsa Chakravarthi
+    - Kai-Mei C. Fu
+    - Maiken H. Mikkelsen
+  journal: ACS Nano
+  volume: 19
+  issue: 20
+  pages: 19310-19317
+  doi: 10.1021/acsnano.5c02273
+
+- id: pederson2025nanolett
+  type: journal
+  title: Rapid, in situ neutralization of nitrogen- and silicon-vacancy centers in diamond using above-band gap optical excitation
+  year: 2025
+  authors:
+    - Christian Pederson
+    - Nicholas S. Yama
+    - Lane Beale
+    - Matthew Markham
+    - Mark E. Turiansky
+    - Kai-Mei C. Fu
+  journal: Nano Letters
+  volume: 25
+  issue: 2
+  pages: 673-680
+  doi: 10.1021/acs.nanolett.4c04657
+  arxiv: "2408.16921"
+
+- id: logan2024oe
+  type: journal
+  title: Selective active resonance tuning for multi-mode nonlinear photonic cavities
+  year: 2024
+  authors:
+    - Alan D. Logan*
+    - Nicholas S. Yama*
+    - Kai-Mei C. Fu
+  journal: Optics Express
+  volume: 32
+  issue: 8
+  pages: 13396-13407
+  doi: 10.1364/OE.512048
+  arxiv: "2311.15606"
+
+- id: boyce2024nanolett
+  type: journal
+  title: Plasmonic diamond membranes for ultrafast silicon vacancy emission
+  year: 2024
+  authors:
+    - Andrew M. Boyce
+    - Hengming Li
+    - Nathaniel C. Wilson
+    - Deniz Acil
+    - Amirhassan Shams-Ansari
+    - Srivatsa Chakravarthi
+    - Christian Pederson
+    - Qixin Shen
+    - Nicholas Yama
+    - Kai-Mei C. Fu
+    - Marko Loncar
+    - Maiken H. Mikkelsen
+  journal: Nano Letters
+  volume: 24
+  issue: 12
+  pages: 3575-3580
+  doi: 10.1021/acs.nanolett.3c04002
+
+- id: yama2024advmater
+  type: journal
+  title: "Silicon-lattice-matched boron-doped gallium phosphide: A scalable acousto-optic platform"
+  year: 2024
+  authors:
+    - Nicholas S. Yama*
+    - I-Tung Chen*
+    - Srivatsa Chakravarthi
+    - Bingzhao Li
+    - Christian Pederson
+    - Bethany E. Matthews
+    - Steven R. Spurgeon
+    - Daniel E. Perea
+    - Mark G. Wirth
+    - Peter V. Sushko
+    - Mo Li
+    - Kai-Mei C. Fu
+  journal: Advanced Materials
+  volume: 36
+  issue: 5
+  pages: "2305434"
+  doi: 10.1002/adma.202305434
+  arxiv: "2305.11436"
+
+- id: han2024apl
+  type: journal
+  title: Creation of color centers in diamond by recoil implantation through dielectric films
+  year: 2024
+  authors:
+    - Yuyang Han
+    - Christian Pederson
+    - Bethany E. Matthews
+    - Nicholas S. Yama
+    - Maxwell F. Parsons
+    - Kai-Mei C. Fu
+  journal: Applied Physics Letters
+  volume: 124
+  issue: 4
+  pages: "044007"
+  doi: 10.1063/5.0183421
+  arxiv: "2310.12484"
+
+- id: chakravarthi2023nanolett
+  type: journal
+  title: Hybrid integration of GaP photonic crystal cavities with silicon-vacancy centers in diamond by stamp-transfer
+  year: 2023
+  authors:
+    - Srivatsa Chakravarthi*
+    - Nicholas S. Yama*
+    - Alex Abulnaga
+    - Ding Huang
+    - Christian Pederson
+    - Karine Hestroffer
+    - Fariba Hatami
+    - Nathalie P. de Leon
+    - Kai-Mei C. Fu
+  journal: Nano Letters
+  volume: 23
+  issue: 9
+  pages: 3708-3715
+  doi: 10.1021/acs.nanolett.2c04890
+  arxiv: "2212.04670"
+
+- id: khatoniar2023adom
+  type: journal
+  title: Optical manipulation of layer-valley coherence via strong exciton-photon coupling in microcavities
+  year: 2023
+  authors:
+    - Mandeep Khatoniar
+    - Nicholas Yama
+    - Areg Ghazaryan
+    - Sriram Guddala
+    - Pouyan Ghaemi
+    - Kausik Majumdar
+    - Vinod Menon
+  journal: Advanced Optical Materials
+  volume: 11
+  issue: 13
+  pages: "2202631"
+  doi: 10.1002/adom.202202631
+  arxiv: "2211.08755"
+
+- id: logan2023oe
+  type: journal
+  title: Triply-resonant sum frequency conversion with gallium phosphide ring resonators
+  year: 2023
+  authors:
+    - Alan D. Logan
+    - Shivangi Shree
+    - Srivatsa Chakravarthi
+    - Nicholas Yama
+    - Christian Pederson
+    - Karine Hestroffer
+    - Fariba Hatami
+    - Kai-Mei C. Fu
+  journal: Optics Express
+  volume: 31
+  issue: 2
+  pages: 1516-1531
+  doi: 10.1364/OE.473211
+  arxiv: "2208.06764"
+
+- id: guddala2021optica
+  type: journal
+  title: Optical analog of valley Hall effect of 2D excitons in hyperbolic metamaterial
+  year: 2021
+  authors:
+    - Sriram Guddala
+    - Mandeep Khatoniar
+    - Nicholas Yama
+    - Wenxiao Liu
+    - Girish S. Agarwal
+    - Vinod M. Menon
+  journal: Optica
+  volume: 8
+  issue: 1
+  pages: 50-55
+  doi: 10.1364/OPTICA.404063
+  # CHECK: assumed to be the published version of arXiv:2008.00166
+  # ("Optical Valley Hall Effect of 2D Excitons in Hyperbolic Metamaterial", same authors).
+  arxiv: "2008.00166"
+
+- id: elassy2019access
+  type: journal
+  title: Complex permittivity of NaOH solutions used in liquid-metal circuits
+  year: 2019
+  authors:
+    - Kareem S. Elassy
+    - M. Arifur Rahman
+    - Nicholas S. Yama
+    - Wayne A. Shiroma
+    - Aaron T. Ohta
+  journal: IEEE Access
+  volume: 7
+  pages: 150150-150156
+  doi: 10.1109/ACCESS.2019.2945773

@@ -1,0 +1,32 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+description: Journal articles and preprints by Nicholas S. Yama.
+---
+{%- comment -%}
+  This page is generated from _data/publications.yml. Edit that file to add papers.
+{%- endcomment -%}
+{%- assign preprints = site.data.publications | where: "type", "preprint" -%}
+{%- assign articles = site.data.publications | where: "type", "journal" -%}
+
+<p class="muted">
+  * denotes equal contribution. See also
+  <a href="{{ site.author.scholar }}">Google Scholar</a>.
+</p>
+
+{% if preprints.size > 0 %}
+<section class="card">
+  <h2>Preprints</h2>
+  {% for paper in preprints %}{% include publication.html pub=paper %}{% endfor %}
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>Journal articles</h2>
+  {%- assign years = articles | group_by: "year" | sort: "name" | reverse %}
+  {% for year in years %}
+  <h3 class="year">{{ year.name }}</h3>
+  {% for paper in year.items %}{% include publication.html pub=paper %}{% endfor %}
+  {% endfor %}
+</section>
