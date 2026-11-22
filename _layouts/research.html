@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<h1 class="page-title">{{ page.title }}</h1>
+
+<section class="card prose">
+  {{ content }}
+</section>
+
+{% for project in page.projects %}
+<section class="card project">
+  {%- if project.image %}
+  <figure class="project-figure">
+    <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" loading="lazy">
+  </figure>
+  {%- endif %}
+  <div class="project-body">
+    <h2 class="project-title">{{ project.title }}</h2>
+    <p>{{ project.text }}</p>
+    {%- if project.papers %}
+    <h3 class="related-heading">Related papers</h3>
+    <ul class="related">
+      {%- for id in project.papers %}
+      {%- assign p = site.data.publications | where: "id", id | first %}
+      {%- if p %}
+      <li>
+        <a href="{{ '/publications/' | relative_url }}#{{ p.id }}">{{ p.title }}</a>
+        <span class="muted">— {% if p.journal %}<em>{{ p.journal }}</em>{% else %}arXiv{% endif %} ({{ p.year }})</span>
+      </li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</section>
+{% endfor %}
