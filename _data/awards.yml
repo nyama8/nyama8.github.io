@@ -1,0 +1,28 @@
+# "Awards and honors" card on the About page, NEWEST FIRST.
+# Fields (leave out any you don't have):
+#   title:   name of the award
+#   year
+#   url:     link for the award name (e.g. the program's page)
+#   article: link to a news story / press release  -> small "Article" button
+# Source: CV (Nov 2026); links from the owner.
+
+- title: IC Postdoctoral Fellowship
+  year: "2025"
+  url: https://orise.orau.gov/icpostdoc/index.html
+
+- title: UW NanoES Student Scientific Achievement Award
+  year: "2025"
+  article: https://www.nano.uw.edu/nicholas-yama-wins-2025-uw-nanoes-student-achievement-award-for-his-work-in-quantum-information-applications/
+
+- title: NSF Graduate Research Fellowship
+  year: "2020"
+  url: https://www.nsf.gov/funding/initiatives/grfp
+  article: https://www.hawaii.edu/news/2020/04/06/engineering-nsf-research-fellowships/
+
+- title: Outstanding Graduating Senior (EE), University of Hawaiʻi at Mānoa
+  year: "2020"
+  article: https://ee.hawaii.edu/events/catalog/events.php?evt=456
+
+- title: University of Hawaiʻi Regents Scholarship
+  year: "2016"
+  url: https://www.hawaii.edu/offices/student-affairs/regents-and-presidential-scholars-program/

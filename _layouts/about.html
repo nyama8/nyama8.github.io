@@ -22,20 +22,39 @@ layout: default
   {{ content }}
 </section>
 
-{%- comment -%} Entries are edited in _data/training.yml. {%- endcomment %}
+{%- comment -%}
+  The two cards below are filled from _data/training.yml and _data/awards.yml.
+{%- endcomment %}
 <section class="card">
   <h2>Professional training</h2>
-  <ul class="training">
+  <ul class="entries">
     {%- for t in site.data.training %}
     <li>
-      <div class="training-head">
-        <p class="training-title">{{ t.title }}</p>
-        <p class="training-years">{{ t.years }}</p>
+      <div class="entry-head">
+        <p class="entry-title">{{ t.title }}</p>
+        <p class="entry-years">{{ t.years }}</p>
       </div>
-      <p class="training-place">{{ t.place }}</p>
+      <p>{{ t.place }}</p>
       {%- for d in t.details %}
-      <p class="training-detail">{{ d }}</p>
+      <p class="entry-detail">{{ d }}</p>
       {%- endfor %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Awards and honors</h2>
+  <ul class="entries">
+    {%- for a in site.data.awards %}
+    <li>
+      <div class="entry-head">
+        <p class="entry-title">
+          {%- if a.url %}<a href="{{ a.url }}">{{ a.title }}</a>{% else %}{{ a.title }}{% endif -%}
+          {%- if a.article %} <a class="btn btn-small" href="{{ a.article }}">Article</a>{% endif -%}
+        </p>
+        <p class="entry-years">{{ a.year }}</p>
+      </div>
     </li>
     {%- endfor %}
   </ul>

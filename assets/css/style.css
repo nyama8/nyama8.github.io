@@ -237,14 +237,16 @@ img { max-width: 100%; height: auto; }
   text-decoration: none;
 }
 
-/* Professional training: title on the left, years on the right. */
-.training { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; line-height: 1.5; }
-.training li + li { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
-.training p { margin: 0; }
-.training-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
-.training-title { font-weight: 600; }
-.training-years { color: var(--accent); font-weight: 550; }
-.training-detail { color: var(--muted); font-size: 0.9rem; }
+/* Lists in the Professional training and Awards cards:
+   title on the left, years on the right, extra lines below. */
+.entries { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; line-height: 1.5; }
+.entries li + li { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+.entries p { margin: 0; }
+.entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0 1rem; }
+.entry-title { font-weight: 600; }
+.entry-years { color: var(--accent); font-weight: 550; white-space: nowrap; }
+.entry-detail { color: var(--muted); font-size: 0.9rem; }
+.btn.btn-small { margin-left: 0.4rem; font-size: 0.72rem; padding: 0 0.45rem; vertical-align: 0.1em; }
 
 /* ---------- Research page ---------- */
 
