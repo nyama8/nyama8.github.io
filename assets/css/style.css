@@ -301,6 +301,20 @@ img { max-width: 100%; height: auto; }
 .pub-authors { color: var(--muted); }
 .pub-authors strong { color: var(--text); font-weight: 650; }
 
+/* Small label such as "Editors' Pick", after the journal name. */
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  vertical-align: 0.1em;
+}
+
 .pub-links {
   position: relative;   /* keeps the hidden checkboxes next to their buttons */
   display: flex;
@@ -321,7 +335,7 @@ img { max-width: 100%; height: auto; }
 }
 .btn:hover { background: var(--accent-soft); text-decoration: none; }
 
-/* Abstract / BibTeX buttons. The real checkbox is hidden; its label is the button. */
+/* BibTeX button. The real checkbox is hidden; its label is the button. */
 .toggle {
   position: absolute;
   opacity: 0;
@@ -333,18 +347,9 @@ label.btn { cursor: pointer; user-select: none; }
 .toggle:checked + .btn { background: var(--accent); color: var(--card); }
 .toggle:focus-visible + .btn { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* Panels stay hidden until their button is switched on. */
+/* The BibTeX panel stays hidden until its button is switched on. */
 .pub-panel { display: none; margin-top: 0.6rem; font-size: 0.9rem; }
-.pub:has(.toggle-abstract:checked) .pub-abstract,
 .pub:has(.toggle-bibtex:checked) .pub-bibtex { display: block; }
-
-.pub-abstract p {
-  margin: 0;
-  padding: 0.75rem;
-  border-left: 3px solid var(--accent);
-  background: var(--code-bg);
-  border-radius: 0 8px 8px 0;
-}
 .pub-bibtex pre {
   background: var(--code-bg);
   border: 1px solid var(--border);

@@ -12,7 +12,8 @@
 #   arxiv:    e.g. 2212.04670                    -> "arXiv" button
 #   arxiv_category: e.g. quant-ph (only used in the BibTeX of preprints)
 #   pdf, code, data: full links                  -> "PDF", "Code", "Data" buttons
-#   abstract: text shown by an "Abstract" button (use  abstract: >-  then indented lines)
+#   press:    link to a press release / news story   -> "Press" button
+#   highlight: short label shown after the journal, e.g. Editors' Pick
 #
 # The BibTeX shown on the page is generated from these fields.
 #
@@ -52,6 +53,8 @@
   # but the title differs. If they are different works, remove this line and add the preprint
   # as its own entry above.
   arxiv: "2601.04733"
+  press: https://www.optica.org/about/newsroom/news_releases/2026/hybrid_gap-on-diamond_platform_strengthens_quantum-light_interactions
+  highlight: Editors' Pick
 
 - id: chen2025sciadv
   type: journal
