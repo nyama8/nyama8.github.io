@@ -17,32 +17,26 @@ layout: default
   </div>
 </section>
 
-{%- comment -%}
-  Two columns on wide screens: About text on the left, side cards on the right.
-  On phones the side cards come first (above the About text).
-  Education entries are edited in _data/education.yml.
-{%- endcomment %}
-<div class="about-grid">
-  <aside class="about-side">
-    <section class="card side-card">
-      <h2>Education</h2>
-      <ul class="edu">
-        {%- for e in site.data.education %}
-        <li>
-          <p class="edu-degree">{{ e.degree }}</p>
-          <p class="edu-school">{{ e.school }}</p>
-          {%- if e.detail %}
-          <p class="edu-detail">{{ e.detail }}</p>
-          {%- endif %}
-          <p class="edu-years">{{ e.years }}</p>
-        </li>
-        {%- endfor %}
-      </ul>
-    </section>
-  </aside>
+<section class="card prose">
+  <h2>About</h2>
+  {{ content }}
+</section>
 
-  <section class="card prose about-main">
-    <h2>About</h2>
-    {{ content }}
-  </section>
-</div>
+{%- comment -%} Entries are edited in _data/training.yml. {%- endcomment %}
+<section class="card">
+  <h2>Professional training</h2>
+  <ul class="training">
+    {%- for t in site.data.training %}
+    <li>
+      <div class="training-head">
+        <p class="training-title">{{ t.title }}</p>
+        <p class="training-years">{{ t.years }}</p>
+      </div>
+      <p class="training-place">{{ t.place }}</p>
+      {%- for d in t.details %}
+      <p class="training-detail">{{ d }}</p>
+      {%- endfor %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

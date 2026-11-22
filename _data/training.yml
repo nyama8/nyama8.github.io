@@ -1,0 +1,22 @@
+# "Professional training" card on the About page, NEWEST FIRST.
+# Fields: title, place, years, details (optional list of extra lines).
+# Source: CV (nsyama_cv_public.pdf, updated Nov 2026).
+
+- title: IC Postdoctoral Fellow
+  place: University of California, Berkeley
+  years: 2026 – present
+  details:
+    - "Advisor: Prof. Alp Sipahigil"
+
+- title: Ph.D. in Electrical Engineering
+  place: University of Washington
+  years: "2025"
+  details:
+    - "Advisor: Prof. Kai-Mei C. Fu"
+    - "Thesis: Hybrid-integrated photonics platform for quantum networks based on defects in diamond"
+
+- title: B.S. in Electrical Engineering; Minor in Physics
+  place: University of Hawaiʻi at Mānoa
+  years: "2020"
+  details:
+    - Summa Cum Laude

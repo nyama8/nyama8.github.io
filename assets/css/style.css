@@ -237,31 +237,14 @@ img { max-width: 100%; height: auto; }
   text-decoration: none;
 }
 
-/* Below the profile: About text (left) and side cards such as Education (right). */
-.about-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 230px;
-  column-gap: 1.25rem;
-  align-items: start;
-}
-.about-main { grid-column: 1; grid-row: 1; }
-.about-side { grid-column: 2; grid-row: 1; }
-
-.side-card { padding: 1.15rem 1.25rem; }
-.side-card h2 { font-size: 1.05rem; margin-bottom: 0.6rem; }
-
-.edu { list-style: none; margin: 0; padding: 0; font-size: 0.88rem; line-height: 1.45; }
-.edu li + li { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
-.edu p { margin: 0; }
-.edu-degree { font-weight: 600; }
-.edu-detail { color: var(--muted); }
-.edu-years { color: var(--accent); font-size: 0.82rem; font-weight: 550; margin-top: 0.15rem; }
-
-/* Narrow screens: one column, side cards on top. */
-@media (max-width: 700px) {
-  .about-grid { grid-template-columns: 1fr; }
-  .about-main, .about-side { grid-column: auto; grid-row: auto; }
-}
+/* Professional training: title on the left, years on the right. */
+.training { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; line-height: 1.5; }
+.training li + li { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+.training p { margin: 0; }
+.training-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
+.training-title { font-weight: 600; }
+.training-years { color: var(--accent); font-weight: 550; }
+.training-detail { color: var(--muted); font-size: 0.9rem; }
 
 /* ---------- Research page ---------- */
 
