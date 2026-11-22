@@ -13,13 +13,14 @@
   </p>
   <p class="pub-venue">
     {%- if p.type == "preprint" -%}
-      <em>arXiv preprint</em>{% if p.arxiv %} arXiv:{{ p.arxiv }}{% endif %} ({{ p.year }})
+      {% if p.arxiv %}arXiv:{{ p.arxiv }}{% else %}Preprint{% endif %} ({{ p.year }})
     {%- else -%}
       <em>{{ p.journal }}</em>
       {%- if p.volume %} <strong>{{ p.volume }}</strong>{% if p.issue %}({{ p.issue }}){% endif %}{% endif -%}
       {%- if p.pages %}, {{ p.pages | replace: "-", "–" }}{% endif %} ({{ p.year }})
     {%- endif -%}
-    {%- if p.highlight %} <span class="badge">{{ p.highlight }}</span>{% endif -%}
+    {%- comment -%} highlight can be one label or a list of labels; each gets its own badge. {%- endcomment -%}
+    {%- for h in p.highlight %} <span class="badge">{{ h }}</span>{% endfor -%}
   </p>
   <div class="pub-links">
     {%- if p.doi %}<a class="btn" href="https://doi.org/{{ p.doi }}">Paper</a>{% endif -%}
