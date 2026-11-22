@@ -4,6 +4,27 @@ layout: default
 {%- comment -%} Page for one research topic (a file in the _topics folder). {%- endcomment %}
 <p class="back-link"><a href="{{ '/research/' | relative_url }}"><span aria-hidden="true">←</span> Research</a></p>
 
+{%- comment -%}
+  Pages with "subtopics:" (e.g. Prior topics): the page title on top, then one card per
+  subtopic, each laid out like a topic page (title, optional place/years line, text,
+  Related papers).
+{%- endcomment %}
+{%- if page.subtopics %}
+<h1 class="page-title">{{ page.title }}</h1>
+{%- for s in page.subtopics %}
+<article class="card prose topic-page">
+  <h2 class="topic-page-title">{{ s.title }}</h2>
+  {%- if s.where %}
+  <p class="subtopic-where">{{ s.where }}</p>
+  {%- endif %}
+  {%- if s.text %}
+  <p>{{ s.text }}</p>
+  {%- endif %}
+  {% include related-papers.html ids=s.papers %}
+</article>
+{%- endfor %}
+{%- else %}
+
 <article class="card prose topic-page">
   <h1 class="topic-page-title">{{ page.title }}</h1>
   {%- if page.image %}
@@ -13,19 +34,6 @@ layout: default
   </figure>
   {%- endif %}
   {{ content }}
-
-  {%- comment -%}
-    Subtopics (optional, e.g. on "Prior topics"): an inner card per entry in "subtopics:",
-    with a title, optional place/years line, a short text, and its papers.
-  {%- endcomment %}
-  {%- for s in page.subtopics %}
-  <div class="subtopic">
-    <h2 class="subtopic-title">{{ s.title }}</h2>
-    {%- if s.where %}<p class="subtopic-where">{{ s.where }}</p>{% endif %}
-    {%- if s.text %}<p class="subtopic-text">{{ s.text }}</p>{% endif %}
-    {% include related-papers.html ids=s.papers heading="none" %}
-  </div>
-  {%- endfor %}
 
   {%- comment -%}
     Highlighted papers: an inner card per entry in "highlights:", showing the paper's
@@ -61,3 +69,4 @@ layout: default
   {%- assign highlight_ids = page.highlights | map: "id" %}
   {% include related-papers.html ids=page.papers exclude=highlight_ids %}
 </article>
+{%- endif %}

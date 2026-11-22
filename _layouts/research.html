@@ -22,7 +22,9 @@ layout: default
     {%- endif %}
     <div class="topic-body">
       <h3 class="topic-title">{{ topic.title }}</h3>
+      {%- if topic.summary %}
       <p class="topic-summary">{{ topic.summary }}</p>
+      {%- endif %}
       <span class="topic-more">Read more <span aria-hidden="true">→</span></span>
     </div>
   </a>

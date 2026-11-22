@@ -1,12 +1,10 @@
 ---
 # DRAFT: texts are taken from the CV's research descriptions. Please rewrite as needed.
 # (Field descriptions: see _topics/transduction.md)
-# subtopics: one gray card each, with title, where (optional line), text, papers.
+# subtopics: each becomes its own card on this page (like a topic page),
+#            with title, where (optional line), text, papers.
 title: Prior topics
 order: 4
-summary: >-
-  Undergraduate research on light-matter interactions in two-dimensional
-  materials and on liquid-metal RF electronics.
 subtopics:
   - title: Light-matter interactions in 2D materials
     where: City College of New York, with Prof. Vinod M. Menon (2018–2019)

@@ -345,18 +345,8 @@ img { max-width: 100%; height: auto; }
 }
 .highlight .highlight-text { margin: 0; }   /* ".highlight" makes this win over the general paragraph spacing */
 
-/* Subtopic cards (e.g. on the "Prior topics" page): same gray inner card as highlights. */
-.subtopic {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem 1.1rem;
-  margin-top: 0.75rem;
-}
-.subtopic .subtopic-title { font-size: 1.05rem; margin: 0 0 0.15rem; }
-.subtopic .subtopic-where { color: var(--muted); font-size: 0.88rem; margin: 0 0 0.5rem; }
-.subtopic .subtopic-text { margin: 0 0 0.6rem; }
-.subtopic .related { margin: 0; }
+/* Place/years line under a subtopic title on the Prior topics page. */
+.topic-page .subtopic-where { color: var(--muted); font-size: 0.9rem; margin: -0.6rem 0 1rem; }
 
 .related-heading {
   font-size: 0.8rem;
