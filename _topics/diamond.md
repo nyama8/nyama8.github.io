@@ -3,8 +3,9 @@
 # (Field descriptions: see _topics/transduction.md)
 title: Spin-photon interfaces in diamond
 order: 2
-image: /assets/img/research/stamped-phc.jpg
-alt: Electron micrograph of a GaP photonic crystal cavity and its simulated optical mode
+image: /assets/img/research/spin-photon.png
+thumbnail: /assets/img/research/spin-photon-thumb.jpg
+alt: Illustration of a GaP photonic crystal cavity on diamond with a silicon-vacancy center, above a plot of transmission over time switching between spin-up and spin-down levels
 summary: >-
   Hybrid-integrated photonic devices coupled to optically active spin defects
   in diamond, for quantum networks: modeling, design, fabrication, and testing,

@@ -303,7 +303,7 @@ img { max-width: 100%; height: auto; }
 .topic-page-title { font-size: 1.6rem; margin: 0 0 1rem; }
 .topic-figure { margin: 0 0 1.25rem; text-align: center; }
 .topic-figure img {
-  max-height: 360px;
+  max-height: 480px;
   border-radius: 8px;
   background: #ffffff;
   border: 1px solid var(--border);
