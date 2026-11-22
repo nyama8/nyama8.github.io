@@ -24,6 +24,9 @@ highlights:
       fluorescence paths, and the four-level energy diagram of the silicon-vacancy center.
       (b) Transmission and fluorescence versus detuning, with transmission dips at two
       silicon-vacancy centers (SiV 1 and SiV 2).
+    caption: >-
+      (a) Device schematic and energy levels of the silicon-vacancy (SiV) center.
+      (b) Transmission and fluorescence versus detuning, showing two SiV centers.
 papers: [yama2026opticaq, chakravarthi2023nanolett, pederson2025nanolett, li2025acsnano, boyce2024nanolett, han2024apl]
 ---
 

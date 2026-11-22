@@ -322,9 +322,10 @@ img { max-width: 100%; height: auto; }
 .highlight .pub { background: none; border: 0; box-shadow: none; padding: 0; margin: 0; }
 .highlight .pub p { margin: 0; }
 .highlight .pub .pub-links { margin-top: 0.5rem; }
-.highlight .highlight-text {   /* ".highlight" makes this win over the general paragraph spacing */
-  margin: 1rem 0 0;
-  padding-top: 0.85rem;
+/* Below the paper details: a divider, then the figure (with caption) and your text. */
+.highlight-body {
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--border);
 }
 .highlight-figure { margin: 0 0 0.9rem; text-align: center; }
@@ -335,7 +336,14 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--border);
 }
 .highlight-figure a img { cursor: zoom-in; }   /* clicking opens the full-size image */
-.highlight-figure figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
+.highlight-figure figcaption {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-top: 0.45rem;
+  text-align: left;
+}
+.highlight .highlight-text { margin: 0; }   /* ".highlight" makes this win over the general paragraph spacing */
 
 .related-heading {
   font-size: 0.8rem;
