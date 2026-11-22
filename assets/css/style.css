@@ -310,6 +310,32 @@ img { max-width: 100%; height: auto; }
 }
 .topic-figure figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
 
+/* Highlighted paper on a topic page: a gray inner card holding the publication
+   details (same as on the Publications page) plus extra text and a figure. */
+.highlight {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.75rem;
+}
+.highlight .pub { background: none; border: 0; box-shadow: none; padding: 0; margin: 0; }
+.highlight .pub p { margin: 0; }
+.highlight .pub .pub-links { margin-top: 0.5rem; }
+.highlight-text {
+  margin: 0.85rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+.highlight-figure { margin: 0.85rem 0 0; text-align: center; }
+.highlight-figure img {
+  max-height: 320px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+.highlight-figure figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
+
 .related-heading {
   font-size: 0.8rem;
   text-transform: uppercase;

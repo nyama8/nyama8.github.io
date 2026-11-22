@@ -1,11 +1,16 @@
 {%- comment -%}
   List of papers by id, linking to their cards on the Publications page.
-  Use: {% include related-papers.html ids=page.papers %}
+  Use: {% include related-papers.html ids=page.papers exclude=some_ids %}
+  Papers whose id is in "exclude" (e.g. the highlighted ones) are left out.
 {%- endcomment -%}
-{%- if include.ids %}
+{%- assign shown = "" | split: "" %}
+{%- for id in include.ids %}
+  {%- unless include.exclude contains id %}{% assign shown = shown | push: id %}{% endunless %}
+{%- endfor %}
+{%- if shown.size > 0 %}
 <h2 class="related-heading">Related papers</h2>
 <ul class="related">
-  {%- for id in include.ids %}
+  {%- for id in shown %}
   {%- assign p = site.data.publications | where: "id", id | first %}
   {%- if p %}
   <li>

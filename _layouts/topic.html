@@ -13,5 +13,32 @@ layout: default
   </figure>
   {%- endif %}
   {{ content }}
-  {% include related-papers.html ids=page.papers %}
+
+  {%- comment -%}
+    Highlighted papers: an inner card per entry in "highlights:", showing the paper's
+    details from _data/publications.yml plus your own text and an optional figure.
+  {%- endcomment %}
+  {%- if page.highlights %}
+  <h2 class="related-heading">Highlighted paper{% if page.highlights.size > 1 %}s{% endif %}</h2>
+  {%- for h in page.highlights %}
+  {%- assign p = site.data.publications | where: "id", h.id | first %}
+  {%- if p %}
+  <div class="highlight">
+    {% include publication.html pub=p %}
+    {%- if h.text %}
+    <p class="highlight-text">{{ h.text }}</p>
+    {%- endif %}
+    {%- if h.image %}
+    <figure class="highlight-figure">
+      <img src="{{ h.image | relative_url }}" alt="{{ h.alt }}" loading="lazy">
+      {%- if h.caption %}<figcaption>{{ h.caption }}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
+  </div>
+  {%- endif %}
+  {%- endfor %}
+  {%- endif %}
+
+  {%- assign highlight_ids = page.highlights | map: "id" %}
+  {% include related-papers.html ids=page.papers exclude=highlight_ids %}
 </article>
