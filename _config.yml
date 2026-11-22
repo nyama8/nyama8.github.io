@@ -40,6 +40,20 @@ plugins:
 
 permalink: pretty
 
+# Research topics: one Markdown file per topic in the _topics folder.
+# Each becomes its own page at /research/<file name>/ and a card on the Research page.
+collections:
+  topics:
+    output: true
+    permalink: /research/:name/
+
+# Topic pages use the "topic" layout without having to say so in each file.
+defaults:
+  - scope:
+      type: topics
+    values:
+      layout: topic
+
 # Files in the repo that are not part of the website.
 exclude:
   - README.md

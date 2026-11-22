@@ -262,34 +262,50 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- Research page ---------- */
 
-.project {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 1.5rem;
-  align-items: start;
+/* Topic cards: thumbnail on the left, text on the right. The whole card is a link. */
+.topic-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
-
-.project-figure { margin: 0; }
-.project-figure img {
-  display: block;
-  width: 100%;
+.topic-card:hover { text-decoration: none; border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.topic-thumb {
+  width: 180px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;          /* show the whole figure, never crop */
+  flex-shrink: 0;
   border-radius: 8px;
   background: #ffffff;           /* figures have white backgrounds, also in dark mode */
   border: 1px solid var(--border);
 }
+.topic-title { margin: 0 0 0.4rem; color: var(--accent); }
+.topic-summary { margin: 0 0 0.5rem; }
+.topic-more { color: var(--accent); font-size: 0.9rem; font-weight: 550; }
+.topic-card:hover .topic-more { text-decoration: underline; }
 
-.project-title { margin-top: 0; }
-.project-body p { margin: 0 0 0.75rem; }
+/* A topic's own page. */
+.back-link { margin: 0.25rem 0 0.75rem; font-size: 0.95rem; }
+.topic-page-title { font-size: 1.6rem; margin: 0 0 1rem; }
+.topic-figure { margin: 0 0 1.25rem; text-align: center; }
+.topic-figure img {
+  max-height: 360px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+.topic-figure figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
 
 .related-heading {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 1rem 0 0.4rem;
+  margin: 1.5rem 0 0.5rem;
 }
 .related { margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
-.related li { margin-bottom: 0.3rem; }
+.related li { margin-bottom: 0.35rem; }
 
 /* ---------- Publications page ---------- */
 
@@ -402,7 +418,8 @@ label.btn { cursor: pointer; user-select: none; }
   .card { padding: 1.15rem; }
   .profile { flex-direction: column; text-align: center; }
   .profile-links { justify-content: center; }
-  .project { grid-template-columns: 1fr; }
+  .topic-card { flex-direction: column; }
+  .topic-thumb { width: 100%; max-height: 220px; }
   .nav { justify-content: center; padding: 0.4rem 1rem; row-gap: 0; }
   html { scroll-padding-top: 6rem; }   /* the top bar is two lines on phones */
 }

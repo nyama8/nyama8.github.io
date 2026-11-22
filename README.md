@@ -27,7 +27,9 @@ Open <http://localhost:4000>. Pages reload as you save files
 |------------------------------------|----------------------------------------|
 | Bio (About page)                   | `index.md`                             |
 | Name, position, email, links       | `_config.yml`                          |
-| Research overview and project cards | `research.md` (images in `assets/img/research/`) |
+| Professional training, awards (About page) | `_data/training.yml`, `_data/awards.yml` |
+| Research intro text | `research.md` |
+| Research topics (cards + their own pages) | one file per topic in `_topics/` (images in `assets/img/research/`) |
 | Publications                       | `_data/publications.yml`               |
 | CV                                 | replace `assets/pdf/cv.pdf`            |
 | Colors, fonts, spacing             | `assets/css/style.css` (variables at the top) |

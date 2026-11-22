@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- comment -%} Page for one research topic (a file in the _topics folder). {%- endcomment %}
+<p class="back-link"><a href="{{ '/research/' | relative_url }}"><span aria-hidden="true">←</span> Research</a></p>
+
+<article class="card prose topic-page">
+  <h1 class="topic-page-title">{{ page.title }}</h1>
+  {%- if page.image %}
+  <figure class="topic-figure">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.alt }}">
+    {%- if page.caption %}<figcaption>{{ page.caption }}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
+  {{ content }}
+  {% include related-papers.html ids=page.papers %}
+</article>

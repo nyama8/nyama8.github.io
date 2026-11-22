@@ -1,0 +1,18 @@
+{%- comment -%}
+  List of papers by id, linking to their cards on the Publications page.
+  Use: {% include related-papers.html ids=page.papers %}
+{%- endcomment -%}
+{%- if include.ids %}
+<h2 class="related-heading">Related papers</h2>
+<ul class="related">
+  {%- for id in include.ids %}
+  {%- assign p = site.data.publications | where: "id", id | first %}
+  {%- if p %}
+  <li>
+    <a href="{{ '/publications/' | relative_url }}#{{ p.id }}">{{ p.title }}</a>
+    <span class="muted">— {% if p.type == "preprint" %}arXiv:{{ p.arxiv }}{% else %}<em>{{ p.journal }}</em>{% endif %} ({{ p.year }})</span>
+  </li>
+  {%- endif %}
+  {%- endfor %}
+</ul>
+{%- endif %}

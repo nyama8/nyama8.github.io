@@ -7,30 +7,20 @@ layout: default
   {{ content }}
 </section>
 
-{% for project in page.projects %}
-<section class="card project">
-  {%- if project.image %}
-  <figure class="project-figure">
-    <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" loading="lazy">
-  </figure>
+{%- comment -%}
+  One card per file in the _topics folder, in the order given by "order:".
+  The whole card is a link to the topic's own page.
+{%- endcomment %}
+{%- assign topics = site.topics | sort: "order" %}
+{%- for topic in topics %}
+<a class="card topic-card" href="{{ topic.url | relative_url }}">
+  {%- if topic.image %}
+  <img class="topic-thumb" src="{{ topic.image | relative_url }}" alt="{{ topic.alt }}" loading="lazy">
   {%- endif %}
-  <div class="project-body">
-    <h2 class="project-title">{{ project.title }}</h2>
-    <p>{{ project.text }}</p>
-    {%- if project.papers %}
-    <h3 class="related-heading">Related papers</h3>
-    <ul class="related">
-      {%- for id in project.papers %}
-      {%- assign p = site.data.publications | where: "id", id | first %}
-      {%- if p %}
-      <li>
-        <a href="{{ '/publications/' | relative_url }}#{{ p.id }}">{{ p.title }}</a>
-        <span class="muted">— {% if p.journal %}<em>{{ p.journal }}</em>{% else %}arXiv{% endif %} ({{ p.year }})</span>
-      </li>
-      {%- endif %}
-      {%- endfor %}
-    </ul>
-    {%- endif %}
+  <div class="topic-body">
+    <h2 class="topic-title">{{ topic.title }}</h2>
+    <p class="topic-summary">{{ topic.summary }}</p>
+    <span class="topic-more">Read more <span aria-hidden="true">→</span></span>
   </div>
-</section>
-{% endfor %}
+</a>
+{%- endfor %}
