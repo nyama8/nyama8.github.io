@@ -35,6 +35,21 @@ Open <http://localhost:4000>. Pages reload as you save files
 | Colors, fonts, spacing             | `assets/css/style.css` (variables at the top) |
 | Page structure (header, footer)    | `_layouts/` and `_includes/`           |
 
+## Optional background (off)
+
+There is a faint network decoration (nodes and links, pinned to the bottom of the window)
+that is switched off. To turn it on, set `background_network: true` in `_config.yml` and
+restart the preview. The drawing is made by a small Python script; to change it (density,
+shape, colors, a different random layout via `SEED`), edit the settings at the top of
+`_scripts/make-network.py` and run, from this folder:
+
+```
+python3 _scripts/make-network.py
+```
+
+It rewrites `assets/img/network-light.svg` and `assets/img/network-dark.svg`. If the browser
+still shows the old drawing, reload with Cmd+Shift+R.
+
 ## Publishing
 
 Pushing to `master` runs the workflow in `.github/workflows/jekyll.yml`, which builds the site

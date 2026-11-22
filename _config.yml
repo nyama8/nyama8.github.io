@@ -25,6 +25,10 @@ author_names:
 # The CV PDF. To update it, replace assets/pdf/cv.pdf with the new file (same name).
 cv_pdf: /assets/pdf/cv.pdf
 
+# Optional background decoration: a faint network of nodes and links pinned to the
+# bottom of the window. true = on, false = off (the clean look). See README.md.
+background_network: false
+
 # Top navigation, in order.
 nav:
   - title: About
