@@ -322,12 +322,12 @@ img { max-width: 100%; height: auto; }
 .highlight .pub { background: none; border: 0; box-shadow: none; padding: 0; margin: 0; }
 .highlight .pub p { margin: 0; }
 .highlight .pub .pub-links { margin-top: 0.5rem; }
-.highlight-text {
-  margin: 0.85rem 0 0;
+.highlight .highlight-text {   /* ".highlight" makes this win over the general paragraph spacing */
+  margin: 1rem 0 0;
   padding-top: 0.85rem;
   border-top: 1px solid var(--border);
 }
-.highlight-figure { margin: 0.85rem 0 0; text-align: center; }
+.highlight-figure { margin: 0 0 0.9rem; text-align: center; }
 .highlight-figure img {
   max-height: 320px;
   border-radius: 8px;
