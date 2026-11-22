@@ -30,7 +30,9 @@ layout: default
     {%- endif %}
     {%- if h.image %}
     <figure class="highlight-figure">
-      <img src="{{ h.image | relative_url }}" alt="{{ h.alt }}" loading="lazy">
+      <a href="{{ h.image | relative_url }}" target="_blank" rel="noopener" title="Open full size">
+        <img src="{{ h.image | relative_url }}" alt="{{ h.alt }}" loading="lazy">
+      </a>
       {%- if h.caption %}<figcaption>{{ h.caption }}</figcaption>{% endif %}
     </figure>
     {%- endif %}

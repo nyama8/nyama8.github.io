@@ -18,6 +18,12 @@ highlights:
     text: >-
       PLACEHOLDER: two or three sentences in your own words about what this
       paper shows and why it matters.
+    image: /assets/img/research/opticaq-highlight.png
+    alt: >-
+      (a) Diagram of a GaP cavity on diamond with probe, transmission, reflection and
+      fluorescence paths, and the four-level energy diagram of the silicon-vacancy center.
+      (b) Transmission and fluorescence versus detuning, with transmission dips at two
+      silicon-vacancy centers (SiV 1 and SiV 2).
 papers: [yama2026opticaq, chakravarthi2023nanolett, pederson2025nanolett, li2025acsnano, boyce2024nanolett, han2024apl]
 ---
 

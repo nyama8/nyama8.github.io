@@ -334,6 +334,7 @@ img { max-width: 100%; height: auto; }
   background: #ffffff;
   border: 1px solid var(--border);
 }
+.highlight-figure a img { cursor: zoom-in; }   /* clicking opens the full-size image */
 .highlight-figure figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
 
 .related-heading {
