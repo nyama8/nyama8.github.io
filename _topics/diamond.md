@@ -10,7 +10,7 @@ summary: >-
   Hybrid-integrated photonic devices coupled to optically active spin defects
   in diamond, for quantum networks: modeling, design, fabrication, and testing,
   along with studies of diamond defect physics.
-# Highlighted papers (optional): shown above "Related papers" and left out of that list.
+# Highlights (optional): papers shown above "Related papers" and left out of that list.
 #   id: paper id; text: a few sentences in your words;
 #   image, alt, caption: optional figure (check the journal's reuse policy; credit it in the caption)
 highlights:

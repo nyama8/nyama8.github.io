@@ -13,7 +13,7 @@ alt: Rendering of an on-chip transduction device
 summary: >-
   Theory, design, and experimental investigation of devices that convert
   quantum signals between microwave and optical frequencies.
-# Highlighted papers (optional): shown above "Related papers" and left out of that list.
+# Highlights (optional): papers shown above "Related papers" and left out of that list.
 #   id: paper id; text: a few sentences in your words;
 #   image, alt, caption: optional figure (check the journal's reuse policy; credit it in the caption)
 highlights:

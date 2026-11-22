@@ -15,11 +15,24 @@ layout: default
   {{ content }}
 
   {%- comment -%}
+    Subtopics (optional, e.g. on "Prior topics"): an inner card per entry in "subtopics:",
+    with a title, optional place/years line, a short text, and its papers.
+  {%- endcomment %}
+  {%- for s in page.subtopics %}
+  <div class="subtopic">
+    <h2 class="subtopic-title">{{ s.title }}</h2>
+    {%- if s.where %}<p class="subtopic-where">{{ s.where }}</p>{% endif %}
+    {%- if s.text %}<p class="subtopic-text">{{ s.text }}</p>{% endif %}
+    {% include related-papers.html ids=s.papers heading="none" %}
+  </div>
+  {%- endfor %}
+
+  {%- comment -%}
     Highlighted papers: an inner card per entry in "highlights:", showing the paper's
     details from _data/publications.yml plus your own text and an optional figure.
   {%- endcomment %}
   {%- if page.highlights %}
-  <h2 class="related-heading">Highlighted paper{% if page.highlights.size > 1 %}s{% endif %}</h2>
+  <h2 class="related-heading">Highlights</h2>
   {%- for h in page.highlights %}
   {%- assign p = site.data.publications | where: "id", h.id | first %}
   {%- if p %}
