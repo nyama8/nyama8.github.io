@@ -35,6 +35,27 @@ Open <http://localhost:4000>. Pages reload as you save files
 | Colors, fonts, spacing             | `assets/css/style.css` (variables at the top) |
 | Page structure (header, footer)    | `_layouts/` and `_includes/`           |
 
+## Math (equations)
+
+Pages can show LaTeX math (rendered with KaTeX). Turn it on per page by adding
+`math: true` to the page's front matter (the block between the `---` lines at the top,
+e.g. in a `_topics/` file). Pages without it don't load KaTeX at all.
+
+In the Markdown text of a page, use double dollar signs:
+
+```
+The coupling $$g$$ scales as $$\sqrt{N}$$.          <- inline (inside a sentence)
+
+$$
+\chi^{(2)} = \frac{\mu_{12}\, d}{\hbar(\omega - \omega_e + i\gamma)}
+$$                                                   <- displayed (own lines, blank line before and after)
+```
+
+A single `$` does not start math (so "$5" stays text). In YAML fields at the top of a file
+(`summary:`, `caption:`, a highlight's `text:`), Markdown is not processed: write `\( ... \)`
+for inline math or `\[ ... \]` for displayed math there, inside a `>-` block so the
+backslashes are kept as typed.
+
 ## Optional background (off)
 
 There is a faint network decoration (nodes and links, pinned to the bottom of the window)

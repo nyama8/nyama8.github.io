@@ -1,0 +1,20 @@
+{%- comment -%}
+  Math typesetting with KaTeX, loaded only on pages with "math: true" in their front matter.
+  Write math in Markdown as $$ ... $$ (inline inside a sentence, displayed when on its own
+  lines). In YAML fields (summary, caption, text) use \( ... \) inline or \[ ... \] displayed.
+  The version is pinned so it never changes unexpectedly.
+{%- endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.querySelector("main"), {
+      delimiters: [
+        { left: "\\[", right: "\\]", display: true },
+        { left: "\\(", right: "\\)", display: false }
+      ],
+      throwOnError: false
+    });
+  });
+</script>

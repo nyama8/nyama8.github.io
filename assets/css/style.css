@@ -481,6 +481,11 @@ label.btn { cursor: pointer; user-select: none; }
   margin: 0;
 }
 
+/* ---------- Math (KaTeX, on pages with "math: true") ---------- */
+
+/* Long displayed equations scroll sideways on narrow screens instead of overflowing. */
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.15rem 0; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
