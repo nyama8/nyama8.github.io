@@ -16,8 +16,9 @@ layout: default
   {%- assign topics = site.topics | sort: "order" %}
   {%- for topic in topics %}
   <a class="topic-card" href="{{ topic.url | relative_url }}">
-    {%- if topic.image %}
-    <img class="topic-thumb" src="{{ topic.image | relative_url }}" alt="{{ topic.alt }}" loading="lazy">
+    {%- assign thumb = topic.thumbnail | default: topic.image %}
+    {%- if thumb %}
+    <img class="topic-thumb" src="{{ thumb | relative_url }}" alt="{{ topic.alt }}" loading="lazy">
     {%- endif %}
     <div class="topic-body">
       <h3 class="topic-title">{{ topic.title }}</h3>
