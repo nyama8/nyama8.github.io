@@ -269,7 +269,7 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 1.75rem 0 0.75rem;
+  margin: 2.75rem 0 0.75rem;   /* space above "TOPICS" */
 }
 .topic-card {
   display: flex;
@@ -350,7 +350,7 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 1.5rem 0 0.5rem;
+  margin: 2.5rem 0 0.6rem;   /* space above "HIGHLIGHTED PAPER" and "RELATED PAPERS" */
 }
 .related { margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
 .related li { margin-bottom: 0.35rem; }
