@@ -196,6 +196,18 @@ img { max-width: 100%; height: auto; }
 .nav-links a:hover,
 .nav-links a[aria-current="page"] { color: var(--accent); text-decoration: none; }
 .nav-links a[aria-current="page"] { font-weight: 600; }
+/* Reserve the width of the bold version of each menu item (an invisible bold copy of the
+   label, from data-label), so the items don't shift when the current page turns bold. */
+.nav-links a[data-label] { display: inline-flex; flex-direction: column; align-items: center; }
+.nav-links a[data-label]::after {
+  content: attr(data-label);
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
 
 .theme-toggle {
   display: inline-flex;
