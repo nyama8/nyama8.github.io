@@ -12,7 +12,7 @@
 #   arxiv:    e.g. 2212.04670                    -> "arXiv" button
 #   arxiv_category: e.g. quant-ph (only used in the BibTeX of preprints)
 #   pdf, code, data: full links                  -> "PDF", "Code", "Data" buttons
-#   abstract: text shown under an "Abstract" toggle (use  abstract: >-  then indented lines)
+#   abstract: text shown by an "Abstract" button (use  abstract: >-  then indented lines)
 #
 # The BibTeX shown on the page is generated from these fields.
 #

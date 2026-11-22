@@ -302,6 +302,7 @@ img { max-width: 100%; height: auto; }
 .pub-authors strong { color: var(--text); font-weight: 650; }
 
 .pub-links {
+  position: relative;   /* keeps the hidden checkboxes next to their buttons */
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -320,14 +321,31 @@ img { max-width: 100%; height: auto; }
 }
 .btn:hover { background: var(--accent-soft); text-decoration: none; }
 
-.pub-details { margin-top: 0.4rem; font-size: 0.9rem; }
-.pub-details summary {
-  cursor: pointer;
-  color: var(--muted);
-  width: fit-content;
+/* Abstract / BibTeX buttons. The real checkbox is hidden; its label is the button. */
+.toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
-.pub-details summary:hover { color: var(--accent); }
-.pub-details pre {
+label.btn { cursor: pointer; user-select: none; }
+.toggle:checked + .btn { background: var(--accent); color: var(--card); }
+.toggle:focus-visible + .btn { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Panels stay hidden until their button is switched on. */
+.pub-panel { display: none; margin-top: 0.6rem; font-size: 0.9rem; }
+.pub:has(.toggle-abstract:checked) .pub-abstract,
+.pub:has(.toggle-bibtex:checked) .pub-bibtex { display: block; }
+
+.pub-abstract p {
+  margin: 0;
+  padding: 0.75rem;
+  border-left: 3px solid var(--accent);
+  background: var(--code-bg);
+  border-radius: 0 8px 8px 0;
+}
+.pub-bibtex pre {
   background: var(--code-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -335,7 +353,7 @@ img { max-width: 100%; height: auto; }
   overflow-x: auto;
   font-size: 0.8rem;
   line-height: 1.5;
-  margin: 0.5rem 0 0;
+  margin: 0;
 }
 
 /* ---------- Footer ---------- */

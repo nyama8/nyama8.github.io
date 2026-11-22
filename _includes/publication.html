@@ -26,15 +26,23 @@
     {%- if p.pdf %}<a class="btn" href="{{ p.pdf | relative_url }}">PDF</a>{% endif -%}
     {%- if p.code %}<a class="btn" href="{{ p.code }}">Code</a>{% endif -%}
     {%- if p.data %}<a class="btn" href="{{ p.data }}">Data</a>{% endif -%}
+    {%- comment -%}
+      Abstract and BibTeX buttons: each is a hidden checkbox with a button-style label.
+      Clicking the label ticks the box, and the stylesheet then shows the matching panel below.
+    {%- endcomment -%}
+    {%- if p.abstract %}
+    <input class="toggle toggle-abstract" type="checkbox" id="{{ p.id }}-abstract-toggle" aria-controls="{{ p.id }}-abstract">
+    <label class="btn" for="{{ p.id }}-abstract-toggle">Abstract</label>
+    {%- endif %}
+    <input class="toggle toggle-bibtex" type="checkbox" id="{{ p.id }}-bibtex-toggle" aria-controls="{{ p.id }}-bibtex">
+    <label class="btn" for="{{ p.id }}-bibtex-toggle">BibTeX</label>
   </div>
   {%- if p.abstract %}
-  <details class="pub-details">
-    <summary>Abstract</summary>
+  <div class="pub-panel pub-abstract" id="{{ p.id }}-abstract">
     <p>{{ p.abstract }}</p>
-  </details>
+  </div>
   {%- endif %}
-  <details class="pub-details">
-    <summary>BibTeX</summary>
+  <div class="pub-panel pub-bibtex" id="{{ p.id }}-bibtex">
     {%- capture authors -%}{{ p.authors | join: " and " | remove: "*" }}{%- endcapture -%}
     {%- if p.type == "preprint" %}
 <pre><code>@misc{ {{- p.id }},
@@ -57,5 +65,5 @@
   doi     = { {{- p.doi -}} }{% endif %}
 }</code></pre>
     {%- endif %}
-  </details>
+  </div>
 </article>
