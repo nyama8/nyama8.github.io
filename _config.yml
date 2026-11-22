@@ -1,0 +1,49 @@
+# Site settings. After editing this file, restart `bundle exec jekyll serve`
+# (it is the one file that is not reloaded automatically).
+
+title: Nick Yama
+description: >-
+  Personal academic website of Nicholas S. Yama, EE PhD candidate at the
+  University of Washington.
+url: "https://nyama8.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Nicholas S. Yama
+  position: EE PhD candidate at the University of Washington
+  email: nsyama@uw.edu
+  scholar: https://scholar.google.com/citations?user=X5lPmGYAAAAJ&hl=en
+  github: https://github.com/nyama8
+
+# Name spellings to show in bold in author lists (as written in _data/publications.yml).
+author_names:
+  - Nicholas S. Yama
+  - Nicholas Yama
+
+# PLACEHOLDER: put your CV at assets/pdf/cv.pdf (or change this path).
+# Until that file exists, the "CV" links lead to the "page not found" page.
+cv_pdf: /assets/pdf/cv.pdf
+
+# Top navigation, in order.
+nav:
+  - title: About
+    url: /
+  - title: Research
+    url: /research/
+  - title: Publications
+    url: /publications/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: pretty
+
+# Files in the repo that are not part of the website.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .ruby-version
