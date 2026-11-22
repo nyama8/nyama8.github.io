@@ -1,4 +1,4 @@
-# Publications: one entry per paper, NEWEST FIRST.
+# Publications (journal articles and preprints): one entry per paper, NEWEST FIRST.
 # Used by the Publications page and by the "Related papers" lists on the Research page.
 #
 # Fields (leave out any you don't have; link buttons only appear for fields that are filled in):
@@ -18,8 +18,6 @@
 #
 # Sources used to fill this in (Nov 2026): the old CV page, Google Scholar, Crossref and arXiv.
 
-# ---------------------------------------------------------------- preprints
-
 - id: yama2026transduction
   type: preprint
   title: Microwave-optical quantum transduction with quantum-well exciton polaritons
@@ -34,8 +32,6 @@
     - Alp Sipahigil
   arxiv: "2611.21785"
   arxiv_category: quant-ph
-
-# ---------------------------------------------------------------- journal articles
 
 - id: yama2026opticaq
   type: journal
