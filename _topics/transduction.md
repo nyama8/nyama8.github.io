@@ -6,9 +6,11 @@
 # The text below the --- line is the topic's own page.
 title: Quantum transduction
 order: 1
-image: /assets/img/research/transduction.jpg
+image: /assets/img/research/transduction.png
 thumbnail: /assets/img/research/transduction-thumb.jpg
-alt: Rendering of an on-chip transduction device
+alt: >-
+  Diagram of two dilution refrigerators, each with a quantum processor (QPU) and a
+  microwave-to-optical (M2O) transducer, connected by a room-temperature fiber-optic link.
 summary: >-
   Novel devices with enhanced nonlinearities for microwave-optical quantum frequency transduction.
 # Highlights (optional): papers shown above "Related papers" and left out of that list.
