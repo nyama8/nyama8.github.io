@@ -49,10 +49,6 @@
   issue: 5
   pages: 511-517
   doi: 10.1364/OPTICAQ.607235
-  # CHECK: assumed to be the published version of arXiv:2601.04733
-  # ("A scalable gallium-phosphide-on-diamond spin-photon interface"). Same authors and topic,
-  # but the title differs. If they are different works, remove this line and add the preprint
-  # as its own entry above.
   arxiv: "2601.04733"
   press: https://www.optica.org/about/newsroom/news_releases/2026/hybrid_gap-on-diamond_platform_strengthens_quantum-light_interactions
   highlight: Editors' Pick
@@ -270,8 +266,6 @@
   issue: 1
   pages: 50-55
   doi: 10.1364/OPTICA.404063
-  # CHECK: assumed to be the published version of arXiv:2008.00166
-  # ("Optical Valley Hall Effect of 2D Excitons in Hyperbolic Metamaterial", same authors).
   arxiv: "2008.00166"
 
 - id: elassy2019access

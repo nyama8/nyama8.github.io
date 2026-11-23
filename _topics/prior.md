@@ -1,5 +1,4 @@
 ---
-# DRAFT: texts are taken from the CV's research descriptions. Please rewrite as needed.
 # (Field descriptions: see _topics/transduction.md)
 # subtopics: each becomes its own card on this page (like a topic page),
 #            with title, text, papers.
