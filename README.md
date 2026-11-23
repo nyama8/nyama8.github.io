@@ -31,6 +31,8 @@ Open <http://localhost:4000>. Pages reload as you save files
 | Research intro text | `research.md` |
 | Research topics (cards + their own pages) | one file per topic in `_topics/` (images in `assets/img/research/`) |
 | Publications                       | `_data/publications.yml`               |
+| Gallery images and captions        | `_data/gallery.yml` (images in `assets/img/gallery/`; intro text in `gallery.md`) |
+| Image viewer (gallery and highlight figures open in front of the page) | `_includes/lightbox.html` |
 | CV                                 | replace `assets/pdf/cv.pdf`            |
 | Colors, fonts, spacing             | `assets/css/style.css` (variables at the top) |
 | Page structure (header, footer)    | `_layouts/` and `_includes/`           |

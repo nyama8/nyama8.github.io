@@ -37,6 +37,8 @@ nav:
     url: /research/
   - title: Publications
     url: /publications/
+  - title: Gallery
+    url: /gallery/
 
 plugins:
   - jekyll-seo-tag

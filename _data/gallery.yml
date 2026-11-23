@@ -1,0 +1,42 @@
+# Images on the Gallery page, in the order shown (2 per row, 1 per row on phones).
+# DRAFT: titles, captions and alt text were written by Claude from the images alone. Please rewrite.
+#
+# Fields for each image:
+#   image:   the picture, in assets/img/gallery/ (about 2000 px wide; JPG for photos)
+#   title:   a few words, shown in bold under the picture
+#   caption: optional short sentence after the title
+#   alt:     a short description for screen readers
+#   papers:  optional list of paper ids from _data/publications.yml (shown as small links)
+# The tile shows the picture cropped to a 4:3 box; clicking it opens the whole picture.
+
+- image: /assets/img/gallery/opticaq-render.jpg
+  title: GaP-on-diamond photonic crystals
+  caption: A Blender rendering of GaP-on-diamond photonic crystal devices under laser illumination.
+  alt: >-
+    3D rendering of rows of gold-colored nanophotonic devices on a substrate,
+    with red laser beams shining down on them.
+  papers: [yama2026opticaq]
+
+- image: /assets/img/gallery/opticaq-micrograph.jpg
+  title: Stamp-transferred array
+  caption: Optical micrograph of an array of stamp-transferred GaP-on-diamond devices.
+  alt: >-
+    Optical microscope image of a four-by-ten grid of small numbered devices on an
+    orange-to-purple background, with a 10 micrometer scale bar.
+  papers: [yama2026opticaq]
+
+- image: /assets/img/gallery/opticaq-mount.jpg
+  title: The samples
+  caption: Two diamond chips with stamped GaP photonic crystal nanobeam cavities.
+  alt: >-
+    Close-up photo of two small square chips on a round gold-colored sample mount,
+    between two hex screws.
+  papers: [yama2026opticaq]
+
+- image: /assets/img/gallery/nanolett2023-sem.jpg
+  title: The bubble
+  caption: SEM image of undercut GaP photonic crystal nanobeam devices with a fabrication defect.
+  alt: >-
+    Grayscale scanning electron microscope image of three thin nanobeams with rows of
+    holes, held in a frame labeled C24-M, over a textured surface.
+  papers: [chakravarthi2023nanolett, yama2026opticaq]

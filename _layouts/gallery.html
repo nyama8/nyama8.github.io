@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<h1 class="page-title">{{ page.title }}</h1>
+
+<section class="card">
+  {%- assign intro = content | strip %}
+  {%- if intro != "" %}
+  <div class="prose gallery-intro">
+    {{ content }}
+  </div>
+  {%- endif %}
+
+  {%- comment -%}
+    One tile per entry in _data/gallery.yml. Clicking the picture opens it large in
+    front of the page (_includes/lightbox.html), same as the highlight figures.
+  {%- endcomment %}
+  <div class="gallery">
+    {%- for item in site.data.gallery %}
+    <figure class="gallery-item">
+      <a class="zoom" href="{{ item.image | relative_url }}" target="_blank" rel="noopener" title="Open full size">
+        <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+      </a>
+      <figcaption>
+        {%- if item.title %}<strong class="gallery-title">{{ item.title }}</strong>{% endif %}
+        {%- if item.caption %} {{ item.caption }}{% endif %}
+        {%- if item.papers %}
+        <span class="gallery-papers">
+          {%- for id in item.papers %}
+          {%- assign p = site.data.publications | where: "id", id | first %}
+          {%- if p %}
+          {%- unless forloop.first %}<span class="sep" aria-hidden="true">·</span>{% endunless %}
+          <a href="{{ '/publications/' | relative_url }}#{{ p.id }}" title="{{ p.title }}">
+            {%- if p.type == "preprint" %}arXiv{% else %}{{ p.journal }}{% endif %} ({{ p.year }})</a>
+          {%- endif %}
+          {%- endfor %}
+        </span>
+        {%- endif %}
+      </figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+</section>
