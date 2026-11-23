@@ -1,5 +1,4 @@
 # Images on the Gallery page, in the order shown (2 per row, 1 per row on phones).
-# DRAFT: titles, captions and alt text were written by Claude from the images alone. Please rewrite.
 #
 # Fields for each image:
 #   image:   the picture, in assets/img/gallery/ (about 2000 px wide; JPG for photos)
